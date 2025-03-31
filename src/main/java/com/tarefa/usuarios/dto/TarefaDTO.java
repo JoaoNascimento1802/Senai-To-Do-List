@@ -15,14 +15,14 @@ public class TarefaDTO {
 	private Prioridade prioridade;
 	private StatusDaTarefa status;
 	private Long clienteid;
-	
-	
-	public TarefaDTO(){
-		
+
+	// Construtor vazio
+	public TarefaDTO() {
 	}
 
+	// Construtor com parâmetros
 	public TarefaDTO(Long id, String nomeSetor, String descricaoTarefa, LocalDate dataCadastro, Prioridade prioridade,
-			StatusDaTarefa status) {
+					 StatusDaTarefa status, Long clienteid) {
 		this.id = id;
 		this.nomeSetor = nomeSetor;
 		this.descricaoTarefa = descricaoTarefa;
@@ -31,7 +31,8 @@ public class TarefaDTO {
 		this.status = status;
 		this.clienteid = clienteid;
 	}
-	
+
+	// Construtor com entidade Tarefa
 	public TarefaDTO(Tarefa t) {
 		this.id = t.getId();
 		this.nomeSetor = t.getNomeSetor();
@@ -42,6 +43,7 @@ public class TarefaDTO {
 		this.clienteid = t.getCliente().getId();
 	}
 
+	// Getters e Setters
 	public Long getId() {
 		return id;
 	}
@@ -97,6 +99,4 @@ public class TarefaDTO {
 	public void setClienteid(Long clienteid) {
 		this.clienteid = clienteid;
 	}
-	
-	
 }
