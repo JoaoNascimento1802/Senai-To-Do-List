@@ -22,12 +22,14 @@ public class TarefaController {
 
 	// Endpoint para listar todas as tarefas
 	@GetMapping
+
 	public List<TarefaDTO> findAll() {
 		return tarefaService.findAll();
 	}
 
 	// Endpoint para inserir uma nova tarefa
 	@PostMapping
+
 	public ResponseEntity<TarefaDTO> insert(@RequestBody TarefaDTO dto) {
 		dto = tarefaService.inserir(dto);  // Chama o serviço para inserir a tarefa
 		return ResponseEntity.ok(dto);  // Retorna a resposta com a tarefa criada

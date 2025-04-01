@@ -6,6 +6,10 @@ import com.tarefa.usuarios.entities.Prioridade;
 import com.tarefa.usuarios.entities.StatusDaTarefa;
 import com.tarefa.usuarios.entities.Tarefa;
 
+/**
+ * DTO (Data Transfer Object) para representar uma Tarefa.
+ * Facilita a transferência de dados entre camadas da aplicação.
+ */
 public class TarefaDTO {
 
 	private Long id;
@@ -14,13 +18,25 @@ public class TarefaDTO {
 	private LocalDate dataCadastro;
 	private Prioridade prioridade;
 	private StatusDaTarefa status;
-	private Long clienteid;
+	private Long clienteid; // ID do cliente associado à tarefa
 
-	// Construtor vazio
+	/**
+	 * Construtor padrão sem parâmetros.
+	 */
 	public TarefaDTO() {
 	}
 
-	// Construtor com parâmetros
+	/**
+	 * Construtor para inicializar um objeto TarefaDTO com valores específicos.
+	 *
+	 * @param id              ID da tarefa
+	 * @param nomeSetor       Nome do setor responsável pela tarefa
+	 * @param descricaoTarefa Descrição da tarefa
+	 * @param dataCadastro    Data de cadastro da tarefa
+	 * @param prioridade      Prioridade da tarefa (BAIXA, MÉDIA, ALTA)
+	 * @param status          Status da tarefa (A_FAZER, FAZENDO, PRONTO)
+	 * @param clienteid       ID do cliente associado à tarefa
+	 */
 	public TarefaDTO(Long id, String nomeSetor, String descricaoTarefa, LocalDate dataCadastro, Prioridade prioridade,
 					 StatusDaTarefa status, Long clienteid) {
 		this.id = id;
@@ -32,7 +48,11 @@ public class TarefaDTO {
 		this.clienteid = clienteid;
 	}
 
-	// Construtor com entidade Tarefa
+	/**
+	 * Construtor que recebe uma entidade Tarefa e converte para DTO.
+	 *
+	 * @param t Objeto Tarefa que será convertido em DTO.
+	 */
 	public TarefaDTO(Tarefa t) {
 		this.id = t.getId();
 		this.nomeSetor = t.getNomeSetor();
@@ -43,7 +63,8 @@ public class TarefaDTO {
 		this.clienteid = t.getCliente().getId();
 	}
 
-	// Getters e Setters
+	// Métodos Getters e Setters
+
 	public Long getId() {
 		return id;
 	}

@@ -20,13 +20,17 @@ public class UsuarioController {
 
 	@Autowired
 	UsuarioService usuarioService;
-	
+
+	// Endpoint para listar usuarios
 	@GetMapping
+
 	public ResponseEntity<List<UsuarioDTO>> buscar(){
 		return ResponseEntity.ok(usuarioService.buscarTodos());
 	}
-	
+
+	// Endpoint para inserir um novo usuario
 	@PostMapping
+
 	public ResponseEntity<UsuarioDTO> insert(@RequestBody UsuarioDTO dto){
 		 dto = usuarioService.inserir(dto);
 		 return ResponseEntity.ok(dto);
