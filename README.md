@@ -81,7 +81,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#" title="https://github.com/JoaoNascimento1802">
-        <img src="https://i.pinimg.com/736x/6d/83/b9/6d83b96e6f062c57dcbeb3e325ebcd10.jpg" width="100px;" alt="Foto do Emanuel no GitHub"/><br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiHUjR_YHNor6MGN7WagaBZO7u8DhZe6dP1w&s" width="100px;" alt="Foto do Emanuel no GitHub"/><br>
         <sub>
           <b>Emanuel</b>
         </sub>
